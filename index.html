@@ -3,151 +3,205 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bhuwan Paudel | Portfolio</title>
+  <title>Bhuwan Paudel | Software Engineering Researcher</title>
   <link rel="stylesheet" href="styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <button id="hamburger" aria-label="Open navigation">
-    <span></span><span></span><span></span>
-  </button>
-  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
-
-  <div class="main-container">
-    <aside class="sidebar" id="sidebar">
-      <div class="sidebar-top"></div>
-      <nav>
-        <ul>
-          <li><a href="#about" class="active">About</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#hobbies">Interests & Hobbies</a></li>
-          <li><a href="#blog">Blog</a></li>
-        </ul>
-      </nav>
-      <div class="sidebar-profiles">
-        <a href="https://scholar.google.com/citations?hl=en&user=NIgUUUUAAAAJ&inst=7775641269210119206" target="_blank" title="Google Scholar">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar" class="sidebar-social-icon"/>
-        </a>
-        <a href="https://orcid.org/0009-0004-5806-6624" target="_blank" title="ORCID">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/orcid.svg" alt="ORCID" class="sidebar-social-icon"/>
-        </a>
-        <a href="https://www.linkedin.com/in/bhuwan-paudel/" target="_blank" title="LinkedIn">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="sidebar-social-icon"/>
-        </a>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">BP</div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link active">About</a>
+        <a href="#publications" class="nav-link">Publications</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#interests" class="nav-link">Interests</a>
+        <a href="#blog" class="nav-link">Blog</a>
       </div>
-    </aside>
+    </div>
+  </nav>
 
-    <div class="main-panel">
-      <div class="profile-hero-card">
-        <img src="Images/bhuwan_potrait.png" alt="Portrait of Bhuwan Paudel" class="profile-photo">
-        <div class="profile-header-text">
-          <div class="profile-name">Bhuwan Paudel</div>
-          <div class="profile-title">PhD Candidate in Software Engineering, BTH</div>
-          <!-- <div class="profile-welcome">Optimizing software quality &amp; delivering customer value</div> -->
+  <div class="main-wrapper">
+    <header class="hero-section">
+      <div class="hero-content">
+        <div class="hero-image">
+          <img src="Images/bhuwan_potrait.png" alt="Bhuwan Paudel">
+        </div>
+        <div class="hero-text">
+          <h1>Bhuwan Paudel</h1>
+          <p class="subtitle">PhD Researcher in Software Engineering</p>
+          <p class="tagline">Data-driven approaches to optimize software quality & customer value delivery</p>
+          <div class="social-links">
+            <a href="https://scholar.google.com/citations?hl=en&user=NIgUUUUAAAAJ&inst=7775641269210119206" target="_blank" title="Google Scholar" class="social-icon">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar">
+            </a>
+            <a href="https://orcid.org/0009-0004-5806-6624" target="_blank" title="ORCID" class="social-icon">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/orcid.svg" alt="ORCID">
+            </a>
+            <a href="https://www.linkedin.com/in/bhuwan-paudel/" target="_blank" title="LinkedIn" class="social-icon">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+          </div>
         </div>
       </div>
+    </header>
 
-      <main>
-        <section id="about">
-          <h2>About Me</h2>
-          <div class="about-flex">
-            <div class="about-main">
-            
-            <p>I am a doctoral candidate in Software Engineering at the Software Engineering Research Lab (SERL), Blekinge Institute of Technology (BTH), Karlskrona, Sweden. 
-              My research focuses on data-driven and sustainable software product development, aiming to optimize internal software quality while ensuring continuous delivery of customer value. 
-              I am particularly passionate about understanding how software development organizations can measure and integrate external customer value with internal process and product related metrics. 
-              The overarching goal is to support organizations in effectively balancing resource allocation to enhance both asset quality and value delivery.</p>
+    <main>
+      <section id="about" class="content-section">
+        <h2>About Me</h2>
+        <div class="about-grid">
+          <div class="about-main">
+            <p>I am a doctoral candidate in Software Engineering at the Software Engineering Research Lab (SERL), Blekinge Institute of Technology (BTH), Karlskrona, Sweden. My research focuses on <em>data-driven and sustainable software product development</em>, aiming to optimize internal software quality while ensuring continuous delivery of customer value. I am particularly passionate about understanding how software development organizations can measure and integrate external customer value with internal process and product-related metrics. The overarching goal is to support organizations in effectively balancing resource allocation to enhance both asset quality and value delivery.</p>
 
-            <p>I earned my Bachelor of Software Engineering degree from Nepal and then traveled to Oslo, Norway, for my Master's degree in Informatics: Programming and Systems Architecture from the University of Oslo. After completing my Master's, I moved to Sweden, where I am currently pursuing my PhD.
-              My broader research interests span empirical software engineering, technical debt, sofwtare architetcure, data-driven software maintenance, generative AI, and mining software repositories to facilitate informed decision-making.</p>
+            <p>I earned my Bachelor of Software Engineering degree from Nepal and then moved to Oslo, Norway, for my Master's degree in Informatics: Programming and Systems Architecture from the University of Oslo. After completing my Master's, I relocated to Sweden, where I am currently pursuing my PhD. My broader research interests span empirical software engineering, technical debt, software architecture, data-driven analysis, generative AI, and mining software repositories.</p>
 
-            <p>Outside the academic world, I consider myself as a causal bagpacker and nature lover, often exploring mountains and trails. While I may look like a serious hiker, I'm mostly in it for the snacks, photos, and amazing views :). I also enjoy playing and watching football.</p>            
-          
+            <p>Outside the academic world, I consider myself a casual backpacker and nature lover, often exploring mountains and trails. While I may look like a serious hiker, I'm mostly in it for the snacks, photos, and amazing views. I also enjoy playing and watching football.</p>
           </div>
-            <div class="about-contact">
-              <h3>Contact</h3>
-              <p>
-                <a href="mailto:bhuwan.paudel@bth.se">bhuwan.paudel@bth.se</a>
-              </p>
-              <h3>Department of Software Engineering</h3>
-              <address>
-                Blekinge Institute of Technology (BTH)<br>
-                Deaprtment of Software Engineering<br>
-                J2339<br>
-                37179 Karlskrona, Sweden
-              </address>
-              <h3>Resume</h3>
-              <p>
-                <a href="files/CV_BhuwanPaudel.pdf" download>Download Full Resume</a>
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="publications">
-          <h2>Publications</h2>
-          <div class="section-box">
-            <ul class="publications-list">
-              <li>
-                <a href="https://doi.org/10.1109/SANER64311.2025.00071" class="publication-link" target="_blank">
-                  <strong>Exploring the Relationship between Technical Debt and Lead Time</strong>
-                </a>
-                <br><span>SANER 2025</span>
-              </li>
-              <li>
-                <a href="https://doi.org/10.1007/978-3-031-78392-0_13" class="publication-link" target="_blank">
-                  <strong>A Data-Driven Approach to Optimize Internal Software Quality and Customer Value Delivery</strong>
-                </a>
-                <br><span>PROFES 2024</span>
-              </li>
-
-              <li>
-                <em>More publications coming soon...</em>
-              </li>
-            </ul>
-            <div class="academic-links">
-              <a href="https://scholar.google.com/citations?hl=en&user=NIgUUUUAAAAJ&inst=7775641269210119206" target="_blank">Google Scholar</a> |
-              <a href="https://orcid.org/0009-0004-5806-6624" target="_blank">ORCID</a>
-            </div>
-          </div>
-        </section>
-
-        <section id="education">
-          <h2>Education</h2>
-          <div class="section-box">
-            <ul>
-              <li>
-                <strong>Ph.D. in Software Engineering</strong> (2023–ongoing)<br>
-                Blekinge Institute of Technology, Sweden<br>
-                <em>Thesis: "A Data-Driven Approach to Optimize Internal Software Quality and Customer Value Delivery"</em>
-              </li>
-              <li>
-                <strong>Master’s in Informatics: Programming and Systems Architecture</strong> (2019–2021)<br>
-                University of Oslo, Norway<br>
-                <em>Thesis: "Impact of technical debt on developers' morale and productivity"</em>
-              </li>
-              <li>
-                <strong>Bachelor in Software Engineering</strong> (2013–2017)<br>
-                Pokhara University, Nepal
-              </li>
-            </ul>
-          </div>
-        </section>
-
-                <section id="experience">
-          <h2>Experience</h2>
-          <div class="section-box">
-            <h3 class="exp-section-title">Academic Experience</h3>
-            <div class="exp-entry">
-              <div class="exp-role">PhD Researcher (2023–ongoing)</div>
-              Blekinge Institute of Technology, Sweden
-              <div class="role-c">
-                Conducting research on software architecture, technical debt, and sustainable product development, and collaborating with industry partners.
+          <aside class="contact-sidebar">
+            <div class="contact-card">
+              <h3>Get In Touch</h3>
+              <div class="contact-item">
+                <span class="label">Email</span>
+                <a href="mailto:bhuwan.paudel@bth.se" class="contact-link">bhuwan.paudel@bth.se</a>
               </div>
+              <div class="contact-item">
+                <span class="label">Location</span>
+                <address>
+                  Blekinge Institute of Technology<br>
+                  Department of Software Engineering<br>
+                  J2339, 37179 Karlskrona, Sweden
+                </address>
+              </div>
+              <a href="files/CV_BhuwanPaudel.pdf" download class="btn-download">📄 Download Resume</a>
             </div>
-            <div class="exp-entry exp-indent">
-              <div class="exp-role">Teaching Assistant (TA)</div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="publications" class="content-section">
+        <h2>Publications</h2>
+        <div class="publications-grid">
+          <article class="pub-card">
+            <div class="pub-header">
+              <h3><a href="https://doi.org/10.1007/978-3-032-12089-2_18" target="_blank">Temporal Evolution of Architectural Complexity and Technical Debt in Microservices: An Exploratory Case Study</a></h3>
+              <span class="pub-badge">PROFES 2025</span>
+            </div>
+            <p class="pub-authors">Bhuwan Paudel, Javier Gonzalez-Huerta, Ehsan Zabardast</p>
+            <p class="pub-venue">Conference Paper</p>
+          </article>
+          
+          <article class="pub-card">
+            <div class="pub-header">
+              <h3><a href="https://doi.org/10.1109/saner64311.2025.00071" target="_blank">Exploring the Relationship Between Technical Debt and Lead Time: An Industrial Case Study</a></h3>
+              <span class="pub-badge">SANER 2025</span>
+            </div>
+            <p class="pub-authors">Bhuwan Paudel, Javier Gonzalez-Huerta, Ehsan Zabardast, Eriks Klotins</p>
+            <p class="pub-venue">Conference Paper</p>
+          </article>
+          <article class="pub-card">
+            <div class="pub-header">
+              <h3><a href="https://doi.org/10.1007/978-3-032-12089-2_30" target="_blank">Architecture Degradation at Scale: Challenges and Insights from Practice</a></h3>
+              <span class="pub-badge">PROFES 2025</span>
+            </div>
+            <p class="pub-authors">Ehsan Zabardast, Bhuwan Paudel, Javier Gonzalez-Huerta</p>
+            <p class="pub-venue">Conference Paper</p>
+          </article>
+          
+          <article class="pub-card">
+            <div class="pub-header">
+              <h3><a href="https://www.researchgate.net/publication/395835574_Generative_AI_in_Assessment_and_Feedback_Generation_in_Higher_Education_A_Systematic_Review" target="_blank">Generative AI in Assessment and Feedback Generation in Higher Education: A Systematic Review</a></h3>
+              <span class="pub-badge">ICETC 2025</span>
+            </div>
+            <p class="pub-authors">Amir Yavariabdi, Bhuwan Paudel, Tamara Carleton, Carlos Diego Andrade de Almeida</p>
+            <p class="pub-venue">Conference Paper</p>
+          </article>
+
+          <article class="pub-card">
+            <div class="pub-header">
+              <h3><a href="https://doi.org/10.1007/978-3-031-78392-0_13" target="_blank">A Data-Driven Approach to Optimize Internal Software Quality and Customer Value Delivery</a></h3>
+              <span class="pub-badge">PROFES 2024</span>
+            </div>
+            <p class="pub-authors">Bhuwan Paudel, Javier Gonzalez-Huerta, Daniel Mendez, Eriks Klotins</p>
+            <p class="pub-venue">Conference Paper</p>
+          </article>
+
+
+        </div>
+        <div class="pub-footer">
+          <p>View all publications and citations on my research profiles</p>
+          <div class="pub-links">
+            <a href="https://scholar.google.com/citations?user=NIgUUUUAAAAJ&hl=en" target="_blank" class="link-button">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar" style="width: 20px; height: 20px; margin-right: 8px; vertical-align: middle;"> Google Scholar
+            </a>
+            <a href="https://orcid.org/0009-0004-5806-6624" target="_blank" class="link-button">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/orcid.svg" alt="ORCID" style="width: 20px; height: 20px; margin-right: 8px; vertical-align: middle;"> ORCID Profile
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="content-section">
+        <h2>Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Ph.D. in Software Engineering</h3>
+              <p class="institution">Blekinge Institute of Technology, Sweden</p>
+              <p class="date">2023 – Present</p>
+              <p class="description"><em>Data-Driven Approach to Optimize Internal Software Quality and Customer Value Delivery</em></p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Master's in Informatics: Programming and Systems Architecture</h3>
+              <p class="institution">University of Oslo, Norway</p>
+              <p class="date">2019 – 2021</p>
+              <p class="description"><em>Impact of Technical Debt on Developers' Morale and Productivity</em></p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Bachelor in Software Engineering</h3>
+              <p class="institution">Pokhara University, Nepal</p>
+              <p class="date">2013 – 2017</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="content-section">
+        <h2>Experience</h2>
+        <div class="experience-timeline">
+          <div class="exp-item-card">
+            <div class="exp-timeline-dot"></div>
+            <div class="exp-card-content">
+              <div class="exp-header">
+                <h4>PhD Researcher</h4>
+                <span class="exp-date">2023 – Present</span>
+              </div>
+              <p class="exp-org">🏫 Blekinge Institute of Technology, Sweden</p>
+              <p class="exp-desc">Conducting research on software architecture, technical debt, and sustainable product development, and collaborating with industry partners.</p>
+            </div>
+          </div>
+          <div class="exp-item-card">
+            <div class="exp-timeline-dot"></div>
+            <div class="exp-card-content">
+              <div class="exp-header">
+                <h4>Teaching Assistant</h4>
+                <span class="exp-date">2023 – Present</span>
+              </div>
+              <p class="exp-org">🎓 Blekinge Institute of Technology, Sweden</p>
               <ul class="exp-list">
                 <li>Software Architectures and Quality, 6 ECTS (2023, 2024, 2025)</li>
                 <li>Requirements Engineering and Product Management (2024, 2025)</li>
@@ -156,96 +210,143 @@
                 <li>Introduction to Engineering Practice in ICT (2023)</li>
               </ul>
             </div>
-
-            <h3 class="exp-section-title">Industrial Experience</h3>
-            <div class="exp-entry">
-              <div class="exp-role">Head IT Assistant (2018–2019)</div>
-              Institute of Engineering, Pashchimanchal Campus, Nepal
-              <div class="role-c">
-                Responsible for IT operations, support, and infrastructure management.
+          </div>
+          <div class="exp-item-card">
+            <div class="exp-timeline-dot"></div>
+            <div class="exp-card-content">
+              <div class="exp-header">
+                <h4>Head IT Assistant</h4>
+                <span class="exp-date">2018 – 2019</span>
               </div>
+              <p class="exp-org">💼 Institute of Engineering, Pashchimanchal Campus, Nepal</p>
+              <p class="exp-desc">Responsible for IT operations, support, and infrastructure management.</p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="skills">
-          <h2>Skills</h2>
-          <div class="section-box">
-            <ul class="skills-list">
-              <li>Empirical Software Engineering</li>
-              <li>Software Architecture</li>
-              <li>Technical Debt Analysis</li>
-              <li>Data Science</li>
-              <li>Quantitative and Qualitative Data Analysis</li>
-              <li>Scientfic Writing</li>
-              <li>Teaching & Mentorship</li>
-            </ul>
+      <section id="skills" class="content-section">
+        <h2>Research Interests & Skills</h2>
+        <div class="skills-container">
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon">🔬</div>
+              <h4>Empirical Software Engineering</h4>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">🏗️</div>
+              <h4>Software Architecture</h4>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">📊</div>
+              <h4>Technical Debt Analysis</h4>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">📈</div>
+              <h4>Data-Driven Analysis</h4>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">📊</div>
+              <h4>Quantitative Data Analysis</h4>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">📝</div>
+              <h4>Qualitative Research</h4>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">⛏️</div>
+              <h4>Software Mining</h4>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">✍️</div>
+              <h4>Scientific Writing</h4>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">👨‍🏫</div>
+              <h4>Teaching & Mentorship</h4>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">🤖</div>
+              <h4>Generative AI</h4>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">📊</div>
+              <h4>Data Science</h4>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">🔧</div>
+              <h4>Software Maintenance</h4>
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="hobbies">
-          <h2>Interests & Hobbies</h2>
-          <div class="section-box">
+      <section id="interests" class="content-section">
+        <h2>Interests & Hobbies</h2>
+        <div class="interests-intro">
           <p><strong>Travel</strong>, <strong>photography</strong>, and <strong>football</strong> are things I genuinely enjoy. Whether it's exploring nature with a backpack, capturing moments outdoors, or following a football match, these are my favorite ways to unwind.</p>
-            <div class="gallery-grid">
-              <img src="Images/tilicho.JPEG" alt="Trekking near Tilicho Lake in Nepal">
-              <img src="Images/lofoten1.JPEG" alt="Hiking trail in Lofoten, Norway">
-              <img src="Images/bernabeu.jpg" alt="Visit to Santiago Bernabéu Stadium, Madrid">
-              <img src="Images/running.jpg" alt="Trail run in the mountains">
-              <img src="Images/niagra.jpg" alt="Scenic view near Niagara Falls">
-              <img src="Images/lago_di.jpg" alt="Lago di Braies in the Italian Alps">
-              <img src="Images/tre_cime.jpg" alt="Landscape near Tre Cime di Lavaredo, Italy">
-              <img src="Images/seceda.jpg" alt="Mountain view from Seceda, Dolomites">
-              <img src="Images/lofoten2.JPEG" alt="Coastal scenery in Lofoten Islands">
-              <img src="Images/mp.JPEG" alt="Panoramic view of machhapuchhre">
-              <img src="Images/swiss_panaromic.jpg" alt="Swiss, panaromic">
-              <img src="Images/basantapur.jpg" alt="Basantapur, Nepal">
-              <img src="Images/dolomite_alps.jpg" alt="Dolomites, Alps">
-              <img src="Images/lofoten_top.JPEG" alt="Lofoten, Alps">
-              <img src="Images/mirrors_lofoten.jpg" alt="Fjords, Lofoten">
+        </div>
+        <div class="gallery-grid">
+          <img src="Images/tilicho.JPEG" alt="Trekking near Tilicho Lake in Nepal" loading="lazy">
+          <img src="Images/lofoten1.JPEG" alt="Hiking trail in Lofoten, Norway" loading="lazy">
+          <img src="Images/bernabeu.jpg" alt="Visit to Santiago Bernabéu Stadium, Madrid" loading="lazy">
+          <img src="Images/running.jpg" alt="Trail run in the mountains" loading="lazy">
+          <img src="Images/niagra.jpg" alt="Scenic view near Niagara Falls" loading="lazy">
+          <img src="Images/lago_di.jpg" alt="Lago di Braies in the Italian Alps" loading="lazy">
+          <img src="Images/tre_cime.jpg" alt="Landscape near Tre Cime di Lavaredo, Italy" loading="lazy">
+          <img src="Images/seceda.jpg" alt="Mountain view from Seceda, Dolomites" loading="lazy">
+          <img src="Images/lofoten2.JPEG" alt="Coastal scenery in Lofoten Islands" loading="lazy">
+          <img src="Images/mp.JPEG" alt="Panoramic view of machhapuchhre" loading="lazy">
+          <img src="Images/swiss_panaromic.jpg" alt="Swiss panoramic view" loading="lazy">
+          <img src="Images/basantapur.jpg" alt="Basantapur, Nepal" loading="lazy">
+          <img src="Images/dolomite_alps.jpg" alt="Dolomites, Alps" loading="lazy">
+          <img src="Images/lofoten_top.JPEG" alt="Lofoten, Alps" loading="lazy">
+          <img src="Images/mirrors_lofoten.jpg" alt="Fjords, Lofoten" loading="lazy">
+        </div>
+      </section>
 
-
-
+      <section id="blog" class="content-section">
+        <h2>Blog</h2>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-header">
+              <h3><a href="blogs/blog-journey.html" target="_blank">From Nepal to the Nordics: My Journey of Dreams and Discovery</a></h3>
             </div>
-          </div>
-        </section>
-
-        <section id="blog">
-          <h2>Blog</h2>
-          <div class="section-box">
-            <div class="blog-list">
-            
-              <div class="blog-post">
-                <div class="blog-title">
-                  <a href="blogs/blog-journey.html" target="_blank">From Nepal to the Nordics: My Journey of Dreams and Discovery</a>
-                </div>
-                <div class="blog-meta">July 2025 · Personal Story</div>
-                <div class="blog-snippet">A journey from a small Nepali village to universities in Norway and Sweden...</div>
-              </div>
-
+            <div class="blog-meta">
+              <span class="blog-date">July 2025</span>
+              <span class="blog-category">Personal Story</span>
             </div>
-          </div>
-        </section>
-        <footer>
+            <p class="blog-excerpt">A journey from a small Nepali village to universities in Norway and Sweden...</p>
+            <a href="blogs/blog-journey.html" target="_blank" class="read-more">Read More →</a>
+          </article>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-content">
           <div class="footer-logos">
-            <a href="https://www.bth.se/" target="_blank"> <img src="Images/bth-logo.png" alt="BTH Logo"> </a>
-            <a href="https://www.uio.no/" target="_blank"> <img src="Images/UIO-Logo.png" alt="UiO Logo"> </a>
-            <a href="https://pu.edu.np/" target="_blank"> <img src="Images/pu-logo.png" alt="PU Logo"> </a>
+            <a href="https://www.bth.se/" target="_blank" title="BTH"> 
+              <img src="Images/bth-logo.png" alt="BTH Logo"> 
+            </a>
+            <a href="https://www.uio.no/" target="_blank" title="University of Oslo"> 
+              <img src="Images/UIO-Logo.png" alt="UiO Logo"> 
+            </a>
+            <a href="https://pu.edu.np/" target="_blank" title="Pokhara University"> 
+              <img src="Images/pu-logo.png" alt="PU Logo"> 
+            </a>
           </div>
-          <p>&copy; 2025 Bhuwan Paudel. All rights reserved.</p>
-        </footer>
-      </main>
+          <p class="footer-text">&copy; 2025 Bhuwan Paudel. All rights reserved.</p>
+        </div>
+      </footer>
 
-      <button class="scroll-top-btn" id="scrollTopBtn" title="Scroll to top">
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="11" cy="11" r="11" fill="#1686cc"/>
-          <path d="M7 12l4-4 4 4" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <button class="scroll-top-btn" id="scrollTopBtn" title="Scroll to top" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
       </button>
-    </div>
+    </main>
   </div>
 
-<script src="../scripts.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
-
