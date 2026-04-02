@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Licentiate Thesis — Bhuwan Paudel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:       #1c1c1e;
+      --ink-soft:  #4a4a52;
+      --ink-muted: #8a8a96;
+      --rule:      #dddde0;
+      --accent:    #1d3557;
+      --accent-lt: #e8edf4;
+      --bg:        #ffffff;
+    }
+
+    html { font-size: 17px; scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /*BACK LINK */
+    .back-bar {
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .back-link {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.15s;
+    }
+    .back-link:hover { color: var(--accent); }
+
+    /*  TITLE BLOCK */
+    .title-block {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 5rem 2rem 3.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .type-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1.8rem;
+    }
+    .type-label::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 1px;
+    }
+
+    .thesis-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 600;
+      line-height: 1.18;
+      color: var(--ink);
+      margin-bottom: 2rem;
+      letter-spacing: -0.01em;
+    }
+
+    .thesis-byline {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.5rem;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 2.25rem;
+    }
+
+    .btn-primary {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 0.65rem 1.4rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-primary:hover { background: #142740; transform: translateY(-1px); }
+
+    .btn-outline {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      background: transparent;
+      color: var(--accent);
+      border: 1.5px solid var(--accent);
+      padding: 0.65rem 1.4rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s, transform 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-outline:hover { background: var(--accent-lt); transform: translateY(-1px); }
+
+    /*  PAGE BODY */
+    .page-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 2rem 6rem;
+    }
+
+    .section {
+      padding: 3.5rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .section:last-child { border-bottom: none; }
+
+    .section-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.4rem;
+    }
+
+    /* ── Abstract ── */
+    .abstract-text {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      line-height: 1.85;
+    }
+    .abstract-text p { margin-bottom: 1rem; }
+    .abstract-text p:last-child { margin-bottom: 0; }
+
+    .keywords {
+      margin-top: 1.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .kw-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-right: 0.25rem;
+    }
+    .kw-tag {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      background: var(--accent-lt);
+      color: var(--accent);
+      border: 1px solid #c5d2e4;
+      border-radius: 3px;
+      padding: 0.2rem 0.65rem;
+    }
+
+    /* ── Papers ── */
+    .papers-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .paper-item {
+      display: grid;
+      grid-template-columns: 3rem 1fr;
+      gap: 0 1.75rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .paper-item:last-child { border-bottom: none; }
+
+    .paper-numeral {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: var(--rule);
+      line-height: 1;
+      padding-top: 3px;
+      user-select: none;
+      transition: color 0.2s;
+    }
+    .paper-item:hover .paper-numeral { color: var(--accent); }
+
+    .paper-title {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.55;
+      margin-bottom: 0.5rem;
+    }
+    .paper-title a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .paper-title a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .paper-authors {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.83rem;
+      color: var(--ink-muted);
+      font-style: italic;
+      margin-bottom: 0.6rem;
+    }
+
+    .paper-venue-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .venue-badge {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.2rem 0.6rem;
+      border-radius: 3px;
+    }
+
+    .venue-type {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── Footer ── */
+    .page-footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 520px) {
+      .title-block, .page-body { padding-left: 1.25rem; padding-right: 1.25rem; }
+      .thesis-title { font-size: 2rem; }
+      .paper-item { grid-template-columns: 2.2rem 1fr; gap: 0 1rem; }
+      .paper-numeral { font-size: 1.8rem; }
+      .action-row { flex-direction: column; }
+      .btn-primary, .btn-outline { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="back-bar">
+    <a href="index.html" class="back-link">← Bhuwan Paudel</a>
+  </div>
+
+  <!-- Title Block -->
+  <div class="title-block">
+    <p class="type-label">Licentiate Thesis · 2026</p>
+
+    <h1 class="thesis-title">
+      Evolution of Technical Debt in Large Scale Software Systems
+    </h1>
+
+    <div class="thesis-byline">
+      <span>Bhuwan Paudel</span>
+      <span>Blekinge Institute of Technology</span>
+      <span>Department of Software Engineering</span>
+      <span>Karlskrona, Sweden</span>
+    </div>
+
+    <div class="action-row">
+      <a href="files/kappa.pdf" download class="btn-primary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Full Thesis
+      </a>
+      <a href="https://bth.diva-portal.org/" target="_blank" class="btn-outline">
+        View in DiVA Portal
+      </a>
+    </div>
+  </div>
+
+  <div class="page-body">
+
+    <!-- Abstract -->
+    <div class="section">
+      <p class="section-label">Abstract (This is a preliminary version)</p>
+      <div class="abstract-text">
+        <p>
+          Technical debt (TD) has emerged as a significant research topic in software engineering, leading to considerable efforts to identify, classify, and manage it. However, empirical evidence on how TD and other architectural complexity indicators evolve in large-scale software systems remains limited. While researchers and practitioners perceive TD as a negative factor that hinders developers' performance, the actual relationship between TD and software delivery performance in an industrial context remains underexplored. Understanding these evolutions and relationships is crucial for making informed decisions regarding maintenance, refactoring, and resource allocation.
+        </p>
+        <p> Contiue...</p>
+        
+      </div>
+
+      <div class="keywords">
+        <span class="kw-label">Keywords</span>
+        <span class="kw-tag">Technical Debt</span>
+        <span class="kw-tag">Technical Debt Evolution</span>
+        <span class="kw-tag">Software Evolution</span>
+        <span class="kw-tag">Software Architecture Value</span>
+        <span class="kw-tag">Empirical Software Engineering</span>
+        <span class="kw-tag">Data-Driven Development</span>
+      </div>
+    </div>
+
+    <!-- Included Papers -->
+    <div class="section">
+      <p class="section-label">Included Papers</p>
+
+      <div class="papers-list">
+        <div class="paper-item">
+          <div class="paper-numeral">I</div>
+          <div>
+            <p class="paper-title">
+              <a href="https://doi.org/10.1016/j.jss.2026.112831" target="_blank">
+                Exploring the Evolution of Technical Debt in Monolithic and Hybrid Microservice Architecture: An Industrial Case Study
+              </a>
+            </p>
+            <p class="paper-authors">Bhuwan Paudel, Javier Gonzalez-Huerta, Ehsan Zabardast</p>
+            <div class="paper-venue-row">
+              <span class="venue-badge">Journal of Systems and Software, 2026</span>
+              <span class="venue-type">Journal Paper</span>
+            </div>
+          </div>
+        </div>
+
+                <div class="paper-item">
+          <div class="paper-numeral">II</div>
+          <div>
+            <p class="paper-title">
+              <a href="https://doi.org/10.1007/978-3-032-12089-2_18" target="_blank">
+                Temporal Evolution of Architectural Complexity and Technical Debt in Microservices: An Exploratory Case Study
+              </a>
+            </p>
+            <p class="paper-authors">Bhuwan Paudel, Javier Gonzalez-Huerta, Ehsan Zabardast</p>
+            <div class="paper-venue-row">
+              <span class="venue-badge">PROFES 2025</span>
+              <span class="venue-type">Conference Paper</span>
+            </div>
+          </div>
+        </div>
+
+                <div class="paper-item">
+          <div class="paper-numeral">III</div>
+          <div>
+            <p class="paper-title">
+              <a href="https://doi.org/10.1007/978-3-032-12089-2_30" target="_blank">
+                Architecture Degradation at Scale: Challenges and Insights from Practice
+              </a>
+            </p>
+            <p class="paper-authors">Ehsan Zabardast,Bhuwan Paudel, Javier Gonzalez-Huerta</p>
+            <div class="paper-venue-row">
+              <span class="venue-badge">PROFES 2025</span>
+              <span class="venue-type">Conference Paper</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="paper-item">
+          <div class="paper-numeral">IV</div>
+          <div>
+            <p class="paper-title">
+              <a href="https://doi.org/10.1109/saner64311.2025.00071" target="_blank">
+                Exploring the Relationship Between Technical Debt and Lead Time: An Industrial Case Study
+              </a>
+            </p>
+            <p class="paper-authors">Bhuwan Paudel, Javier Gonzalez-Huerta, Ehsan Zabardast, Eriks Klotins</p>
+            <div class="paper-venue-row">
+              <span class="venue-badge">SANER 2025</span>
+              <span class="venue-type">Conference Paper</span>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="page-footer">
+    &copy; 2025 Bhuwan Paudel · Blekinge Institute of Technology
+  </footer>
+
+</body>
+</html>
